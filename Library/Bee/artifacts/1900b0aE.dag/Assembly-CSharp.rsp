@@ -358,6 +358,9 @@
 "Assets/Kevin Iglesias/Basic Motions/_DemoScene/Scripts/BasicMotionsCamera.cs"
 "Assets/Kevin Iglesias/Basic Motions/_DemoScene/Scripts/BasicMotionsCharacterController.cs"
 "Assets/Scripts/AnimationPlay.cs"
+"Assets/Scripts/ChangeToMap.cs"
+"Assets/Scripts/GetScreenPosition.cs"
+"Assets/Scripts/HighlightPlayer.cs"
 "Assets/Scripts/PlayerController.cs"
 -langversion:9.0
 /deterministic

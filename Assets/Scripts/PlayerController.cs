@@ -15,13 +15,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         player=GetComponent<CharacterController>();
+        Cursor.lockState=CursorLockMode.Locked;
+        Cursor.visible=false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Cursor.lockState=CursorLockMode.Locked;
-        Cursor.visible=false;
+        
 
         float _horizontal=Input.GetAxis("Horizontal");
         float _vertical=Input.GetAxis("Vertical");
@@ -40,7 +41,7 @@ public class PlayerController : MonoBehaviour
         movement.y-=g*Time.deltaTime;
         player.Move(
             player.transform.TransformDirection(
-                movement*speed*Time.deltaTime
+                speed*Time.deltaTime*movement
             )
         );
         x+=Input.GetAxis("Mouse X");
