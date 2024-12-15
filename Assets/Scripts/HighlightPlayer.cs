@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HighlightPlayer : MonoBehaviour
 {   
     public Image pointer;
-    public float size=8f;
+    public float size=4f;
     private bool isShown=false;
     private GetScreenPosition gsp;
     // Start is called before the first frame update
@@ -14,7 +14,7 @@ public class HighlightPlayer : MonoBehaviour
     {
         gsp=GetComponent<GetScreenPosition>();
         if(pointer!=null){
-            pointer.rectTransform.sizeDelta=new Vector2(size,size);
+            pointer.rectTransform.sizeDelta=new(size,size);
             Hide();
         }
     }

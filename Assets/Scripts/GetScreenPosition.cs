@@ -7,16 +7,15 @@ public class GetScreenPosition : MonoBehaviour
     // Start is called before the first frame update
     public Camera map;
     public Vector3 screenPosition;
-    private Transform world;
+    public Transform playerTrans;
     void Start()
     {
-        world=GetComponent<Transform>();
-        screenPosition=map.WorldToScreenPoint(world.position);
+        screenPosition=map.WorldToScreenPoint(playerTrans.position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        screenPosition=map.WorldToScreenPoint(world.position);
+        screenPosition=map.WorldToScreenPoint(playerTrans.position);
     }
 }
