@@ -8,23 +8,22 @@ public class PathOfNavigation : MonoBehaviour
     public NavMeshAgent player;
     private LineRenderer lr;
     public MouseToWorldPosition mtwp;
-    private List<Vector3> path;
+    public List<Vector3> path;
     private Vector3 lastPosition;
     private const float updateDistance=3f;
     private bool isShown=true;
     // Start is called before the first frame update
     void Start()
     {
-        path=new List<Vector3>();
+        path=new List<Vector3>(25);
         lr=GetComponent<LineRenderer>();
-        CalculatePath(player.transform.position,mtwp.worldPosition);
         lastPosition=player.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.N)){
+        if(Input.GetKeyDown(KeyCode.Alpha1)){
             isShown=!isShown;
             SwitchVisibility();
         }
@@ -38,11 +37,7 @@ public class PathOfNavigation : MonoBehaviour
         lr.positionCount=0;
         NavMeshPath nmpath=new();
         
-        if (NavMesh.SamplePosition(end, out NavMeshHit hit, 10f, NavMesh.AllAreas)){
-            Debug.Log("Hit"+hit.position);
-        }else{
-            Debug.Log("Miss");
-        }
+        NavMesh.SamplePosition(end, out NavMeshHit hit, 10f, NavMesh.AllAreas);
         if (player.CalculatePath(hit.position,nmpath)){
             foreach(var cn in nmpath.corners){
                 path.Add(cn);
@@ -50,17 +45,14 @@ public class PathOfNavigation : MonoBehaviour
             player.SetDestination(hit.position);
             if(isShown){
                 lr.positionCount=path.Count;
-                lr.SetPositions(path.ToArray());
+                lr.SetPositions(nmpath.corners);
             }
+            Debug.Log("Path found to "+hit.position);
         }else{
-            Debug.LogWarning("Path not found");
+            Debug.Log("Path not found");
         }
     }
     void SwitchVisibility(){
-        if(isShown){
-            lr.enabled=true;
-        }else{
-            lr.enabled=false;
-        }
+        lr.enabled=isShown;
     }
 }
