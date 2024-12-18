@@ -7,13 +7,13 @@ using UnityEngine.UI;
 public class ARInformation : MonoBehaviour
 {
     public TMP_Text info;
-    public GameObject player;
+    public Transform player;
     public MouseToWorldPosition mtwp;
     private Vector3 lastPos;
     // Start is called before the first frame update
     void Start()
     {
-        lastPos=player.transform.position;
+        lastPos=player.position;
         DisplayText();
     }
 
@@ -24,16 +24,16 @@ public class ARInformation : MonoBehaviour
             info.enabled=!info.enabled;
         }
         DisplayText();
-        lastPos=player.transform.position;
+        lastPos=player.position;
     }
     void DisplayText(){
         var speed=GetSpeed();
-        var curLocation=player.transform.position;
+        var curLocation=player.position;
         var dest=mtwp.worldPosition;
         var time=Vector3.Distance(curLocation,dest)/speed;
         info.text="Speed "+speed+"\nCurrent Location "+curLocation+"\nDestination "+dest+"\nTime "+time;
     }
     float GetSpeed(){
-        return ((player.transform.position-lastPos)/Time.deltaTime).magnitude;
+        return ((player.position-lastPos)/Time.deltaTime).magnitude;
     }
 }

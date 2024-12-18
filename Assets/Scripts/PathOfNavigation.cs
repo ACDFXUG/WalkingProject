@@ -10,7 +10,7 @@ public class PathOfNavigation : MonoBehaviour
     public MouseToWorldPosition mtwp;
     public List<Vector3> path;
     private Vector3 lastPosition;
-    private const float updateDistance=3f;
+    private const float updateDistance=2.5f;
     private bool isShown=true;
     // Start is called before the first frame update
     void Start()

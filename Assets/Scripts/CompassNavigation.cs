@@ -13,13 +13,7 @@ public class CompassNavigation : MonoBehaviour
     private Vector3 start,end,fwd;
     // Start is called before the first frame update
 
-    // void Start()
-    // {
-    //     start=player.position;
-    //     end=mtwp.worldPosition;
-    //     angle=GetAngle(start,end);
-    //     arrow.rectTransform.rotation=Quaternion.Euler(0,0,angle-90);
-    // }
+    void Start(){}
 
     // Update is called once per frame
     void Update()

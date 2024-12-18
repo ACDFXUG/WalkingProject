@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   info: {fileID: 1579692464}
-  player: {fileID: 1877505114}
+  player: {fileID: 1877505118}
   mtwp: {fileID: 97047169}
 --- !u!1001 &312623367
 PrefabInstance:
@@ -1226,6 +1226,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ac6fb9ada49f24683e3eca20786103, type: 3}
+--- !u!1 &891161609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1273605504730366, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+  m_PrefabInstance: {fileID: 1044164030}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &916150503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1340,6 +1345,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0830086465bbffd4ab64ee6fc8c82d74, type: 3}
+--- !u!1001 &1044164030
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1273605504730366, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_Name
+      value: RoadSign
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -729.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.977488
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 792.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.0772588
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.99701107
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -188.862
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444184394468426, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71b2784d9d0155e428b54b4c0997da74, type: 3}
 --- !u!1 &1151886635 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8820873957702219166, guid: b47b31f11a2f04aa8a610f4c61cd74c1, type: 3}
@@ -2047,6 +2109,7 @@ GameObject:
   - component: {fileID: 1664831950}
   - component: {fileID: 1664831949}
   - component: {fileID: 1664831951}
+  - component: {fileID: 1664831952}
   m_Layer: 0
   m_Name: NavigationScripts
   m_TagString: Untagged
@@ -2203,6 +2266,19 @@ MonoBehaviour:
   player: {fileID: 1877505118}
   mtwp: {fileID: 97047169}
   arrow: {fileID: 473258893}
+--- !u!114 &1664831952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664831947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55de9058f2308b545add0e107e5d72db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roadSignPrefab: {fileID: 891161609}
 --- !u!1 &1725608124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2291182829639864034, guid: b47b31f11a2f04aa8a610f4c61cd74c1, type: 3}
@@ -2798,6 +2874,7 @@ SceneRoots:
   - {fileID: 97047166}
   - {fileID: 1664831948}
   - {fileID: 311862034}
+  - {fileID: 1044164030}
   - {fileID: 628757004}
   - {fileID: 1358921284}
   - {fileID: 966658088}
